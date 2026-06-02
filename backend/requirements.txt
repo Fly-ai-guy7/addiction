@@ -1,0 +1,29 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+asyncpg
+pgvector
+alembic
+pydantic
+pydantic-settings
+python-dotenv
+openai
+tiktoken
+langchain
+langchain-openai
+langchain-community
+langgraph
+redis
+celery
+# Testing & Dev
+pytest
+pytest-asyncio
+httpx
+python-multipart
+greenlet
+wikipedia
+arxiv
+duckduckgo-search
+langchain-experimental
+# numexpr is needed for secure math
+numexpr

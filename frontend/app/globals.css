@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 215 35% 8%;
+    --foreground: 0 0% 95%;
+    
+    --card: 215 30% 11%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 215 30% 11%;
+    --popover-foreground: 0 0% 95%;
+    
+    --primary: 162 60% 45%; /* Calming emerald green */
+    --primary-foreground: 215 35% 8%;
+    
+    --secondary: 35 25% 15%; /* Calming warm desert wood/sand */
+    --secondary-foreground: 35 30% 90%;
+    
+    --muted: 215 25% 13%;
+    --muted-foreground: 215 15% 65%;
+    
+    --accent: 174 65% 35%; /* Calm teal-blue */
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 80% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 215 25% 15%;
+    --input: 215 25% 15%;
+    --ring: 162 60% 45%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+  body {
+    background-color: #0C121A; /* Warm dark slate-blue */
+    color: hsl(var(--foreground));
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom premium scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Aman Warm Glassmorphism effects */
+.glass-panel {
+  background: rgba(14, 21, 30, 0.65) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.glass-panel-heavy {
+  background: rgba(11, 16, 23, 0.85) !important;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+
+.glass-card {
+  background: rgba(16, 24, 34, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(63, 159, 129, 0.2);
+  background: rgba(20, 30, 42, 0.55);
+  box-shadow: 0 0 25px rgba(63, 159, 129, 0.03);
+  transform: translateY(-2px);
+}
+
+/* Calming highlights and glows */
+.glow-text-emerald {
+  text-shadow: 0 0 15px rgba(63, 159, 129, 0.25);
+}
+
+.glow-border-emerald {
+  border-color: rgba(63, 159, 129, 0.3) !important;
+  box-shadow: 0 0 20px rgba(63, 159, 129, 0.08);
+}
+
+.glow-btn-active {
+  box-shadow: 0 0 15px rgba(63, 159, 129, 0.1);
+}
+
+/* Status specific soft highlights */
+.status-ring-waiting {
+  box-shadow: 0 0 15px rgba(234, 179, 8, 0.1);
+  border-color: rgba(234, 179, 8, 0.25) !important;
+}
+
+.status-ring-completed {
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.25) !important;
+}
+
+.status-ring-rejected {
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.25) !important;
+}
+
+/* Recharts styling custom helper */
+.recharts-tooltip-cursor {
+  fill: rgba(255, 255, 255, 0.02) !important;
+}
